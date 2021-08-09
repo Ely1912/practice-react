@@ -10,12 +10,14 @@ function App() {
       return [...prevState, {name: uName, age: uAge, id: Math.random().toString()}];
     })
   };
+  //<React.Fragment></React.Fragment> 
   return (
-    <div>
+    <>
       <AddUser onAddUser={onAddUserHandler} />
       <UserList users={users}/>
-    </div>
+    </>
   );
 }
 
 export default App;
+
